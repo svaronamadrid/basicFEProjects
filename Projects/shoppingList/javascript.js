@@ -8,11 +8,9 @@ window.onload=()=>{
         const todoText=todo.value;
         todo.value='';
         listaCompra.push(todoText);
-        const shoppingList= document.getElementById('list');
-        shoppingList.innerHTML='';
+        const lista=document.getElementById('list');
+        const listaCompraTemplate=listaCompra.map(t => '<li>' +t +'</li>');
+        lista.innerHTML=listaCompraTemplate.join('');
 
-        for(let i=0;i<listaCompra.length;i++){
-            shoppingList.innerHTML+='<li>' +listaCompra[i] +'</li>'
-        }
     }
 }
