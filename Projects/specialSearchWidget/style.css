@@ -5,12 +5,45 @@
 }
 
 body{
+    background-color: #89D1FE;
     font-family: 'Roboto', sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
     margin: 0;
+}
+
+.search{
+    position: relative;
+    height: 50px;
+}
+
+.input{
+    background-color: #fff;
+    border: none;
+    padding-left: 20px;
+    width: 50px;
+    height: 55px;
+    transition: width 0.3s ease;
+}
+
+.btn{
+    background-color: #fff;
+    border: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 55px;
+    width: 55px;
+    transition: transform 0.3s ease;
+}
+
+.search.active .input{
+    width: 200px;
+}
+
+.search.active .btn{
+    transform: translateX(198px)
 }
